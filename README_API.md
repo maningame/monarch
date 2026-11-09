@@ -63,7 +63,7 @@ Preload a Monarch screen. This will load but not enable the screen. This is usef
 
 The options table can contain the following fields:
 
-* `keep_loaded` (boolean) - If the `keep_loaded` flag is set Monarch will keep the screen preloaded even after a `hide()` or `back()` navigation event that normally would unload the screen.
+* `keep_loaded` (boolean) - If the `keep_loaded` flag is set Monarch will keep the screen preloaded even after a `hide()` or `back()` navigation event that normally would unload the screen. Pass `keep_loaded = false` to turn this off again, the next `hide()` or `back()` will then unload the screen as usual.
 
 
 ## monarch.is_preloading(screen_id)

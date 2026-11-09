@@ -1074,7 +1074,10 @@ function M.preload(id, options, cb)
 
 		-- keep_loaded is an option for monarch.preload()
 		-- use it to get the same behavior as the auto preload checkbox
-		screen.auto_preload = screen.auto_preload or options and options.keep_loaded
+		-- keep_loaded = false turns the behavior off again
+		if options and options.keep_loaded ~= nil then
+			screen.auto_preload = options.keep_loaded
+		end
 
 		if screen.preloaded or screen.loaded then
 			pcallfn(cb)
